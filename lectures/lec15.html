@@ -1,0 +1,2304 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lecture 15: July 26th, 2024 &#8212; Math 9 Summer Session I 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/lec15';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/ash-vapor.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/ash-vapor.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    UC Irvine Math 9, SSI 2024
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw1.html">Python Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec8.html">Lecture 8: July 10th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec9.html">Lecture 9: July 12th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discussion/dis9.html">Discussion 9: July 12th, 2024</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw2.html">Python Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw3.html">Python Homework #3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec10.html">Lecture 10: July 15th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec11.html">Lecture 11: July 17th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discussion/dis11.html">Discussion 11: July 17th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec12.html">Lecture 12: July 19th, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../discussion/dis12.html">Discussion 12: July 19th, 2024</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw4.html">Python Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec13.html">Lecture 13: July 22nd, 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec14.html">Lecture 14: July 24th, 2024</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Final Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../final/final-instructions.html">🎨 Creative Homework Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../final/final-temp.html">Creative Homework Template</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ybaki97/Math9-Y24" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ybaki97/Math9-Y24/issues/new?title=Issue%20on%20page%20%2Flectures/lec15.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/lec15.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 15: July 26th, 2024</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brief-introduction-to-object-oriented-programming-oop">Brief Introduction to Object-Oriented Programming (OOP)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#os-vs-pathlib">os vs pathlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-namedcolor-class">Defining a NamedColor class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-class-is-a-separate-file">Defining the class is a separate file</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-15-july-26th-2024">
+<h1>Lecture 15: July 26th, 2024<a class="headerlink" href="#lecture-15-july-26th-2024" title="Permalink to this headline">#</a></h1>
+<p>We made it to the last lecture! A few announcements:</p>
+<ul class="simple">
+<li><p>I’ll have student hours during our normal lecture time next Monday. Jessica will have theirs during normal discussion time. Stay tuned for the Wednesday plan.</p></li>
+<li><p>Don’t forget to start working on your final creative assignment :)</p></li>
+</ul>
+<section id="brief-introduction-to-object-oriented-programming-oop">
+<h2>Brief Introduction to Object-Oriented Programming (OOP)<a class="headerlink" href="#brief-introduction-to-object-oriented-programming-oop" title="Permalink to this headline">#</a></h2>
+<p><strong>Very basic idea:</strong> we instantiate “objects” and call “methods” on them.</p>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Non-OOP way</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde8b0edf40&gt;]
+</pre></div>
+</div>
+<img alt="../_images/447f9381209d50cb4847de14583217f322d82d4680f5f1cd0a5c6b4f754c263c.png" src="../_images/447f9381209d50cb4847de14583217f322d82d4680f5f1cd0a5c6b4f754c263c.png" />
+</div>
+</div>
+<p>OOP way</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fde8b3f52b0&gt;]
+</pre></div>
+</div>
+<img alt="../_images/447f9381209d50cb4847de14583217f322d82d4680f5f1cd0a5c6b4f754c263c.png" src="../_images/447f9381209d50cb4847de14583217f322d82d4680f5f1cd0a5c6b4f754c263c.png" />
+</div>
+</div>
+<p>Maybe we think that the Non-OOP way is better, because it looks more simple. I’d say for the most simple plots, that’s fine. However, as soon as you want to do anything more complicated, the OOP way is going to be best. We’ll see an example of this later in the lecture.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function plot in module matplotlib.pyplot:
+
+plot(*args, scalex=True, scaley=True, data=None, **kwargs)
+    Plot y versus x as lines and/or markers.
+    
+    Call signatures::
+    
+        plot([x], y, [fmt], *, data=None, **kwargs)
+        plot([x], y, [fmt], [x2], y2, [fmt2], ..., **kwargs)
+    
+    The coordinates of the points or line nodes are given by *x*, *y*.
+    
+    The optional parameter *fmt* is a convenient way for defining basic
+    formatting like color, marker and linestyle. It&#39;s a shortcut string
+    notation described in the *Notes* section below.
+    
+    &gt;&gt;&gt; plot(x, y)        # plot x and y using default line style and color
+    &gt;&gt;&gt; plot(x, y, &#39;bo&#39;)  # plot x and y using blue circle markers
+    &gt;&gt;&gt; plot(y)           # plot y using x as index array 0..N-1
+    &gt;&gt;&gt; plot(y, &#39;r+&#39;)     # ditto, but with red plusses
+    
+    You can use `.Line2D` properties as keyword arguments for more
+    control on the appearance. Line properties and *fmt* can be mixed.
+    The following two calls yield identical results:
+    
+    &gt;&gt;&gt; plot(x, y, &#39;go--&#39;, linewidth=2, markersize=12)
+    &gt;&gt;&gt; plot(x, y, color=&#39;green&#39;, marker=&#39;o&#39;, linestyle=&#39;dashed&#39;,
+    ...      linewidth=2, markersize=12)
+    
+    When conflicting with *fmt*, keyword arguments take precedence.
+    
+    
+    **Plotting labelled data**
+    
+    There&#39;s a convenient way for plotting objects with labelled data (i.e.
+    data that can be accessed by index ``obj[&#39;y&#39;]``). Instead of giving
+    the data in *x* and *y*, you can provide the object in the *data*
+    parameter and just give the labels for *x* and *y*::
+    
+    &gt;&gt;&gt; plot(&#39;xlabel&#39;, &#39;ylabel&#39;, data=obj)
+    
+    All indexable objects are supported. This could e.g. be a `dict`, a
+    `pandas.DataFrame` or a structured numpy array.
+    
+    
+    **Plotting multiple sets of data**
+    
+    There are various ways to plot multiple sets of data.
+    
+    - The most straight forward way is just to call `plot` multiple times.
+      Example:
+    
+      &gt;&gt;&gt; plot(x1, y1, &#39;bo&#39;)
+      &gt;&gt;&gt; plot(x2, y2, &#39;go&#39;)
+    
+    - If *x* and/or *y* are 2D arrays a separate data set will be drawn
+      for every column. If both *x* and *y* are 2D, they must have the
+      same shape. If only one of them is 2D with shape (N, m) the other
+      must have length N and will be used for every data set m.
+    
+      Example:
+    
+      &gt;&gt;&gt; x = [1, 2, 3]
+      &gt;&gt;&gt; y = np.array([[1, 2], [3, 4], [5, 6]])
+      &gt;&gt;&gt; plot(x, y)
+    
+      is equivalent to:
+    
+      &gt;&gt;&gt; for col in range(y.shape[1]):
+      ...     plot(x, y[:, col])
+    
+    - The third way is to specify multiple sets of *[x]*, *y*, *[fmt]*
+      groups::
+    
+      &gt;&gt;&gt; plot(x1, y1, &#39;g^&#39;, x2, y2, &#39;g-&#39;)
+    
+      In this case, any additional keyword argument applies to all
+      datasets. Also this syntax cannot be combined with the *data*
+      parameter.
+    
+    By default, each line is assigned a different style specified by a
+    &#39;style cycle&#39;. The *fmt* and line property parameters are only
+    necessary if you want explicit deviations from these defaults.
+    Alternatively, you can also change the style cycle using
+    :rc:`axes.prop_cycle`.
+    
+    
+    Parameters
+    ----------
+    x, y : array-like or scalar
+        The horizontal / vertical coordinates of the data points.
+        *x* values are optional and default to ``range(len(y))``.
+    
+        Commonly, these parameters are 1D arrays.
+    
+        They can also be scalars, or two-dimensional (in that case, the
+        columns represent separate data sets).
+    
+        These arguments cannot be passed as keywords.
+    
+    fmt : str, optional
+        A format string, e.g. &#39;ro&#39; for red circles. See the *Notes*
+        section for a full description of the format strings.
+    
+        Format strings are just an abbreviation for quickly setting
+        basic line properties. All of these and more can also be
+        controlled by keyword arguments.
+    
+        This argument cannot be passed as keyword.
+    
+    data : indexable object, optional
+        An object with labelled data. If given, provide the label names to
+        plot in *x* and *y*.
+    
+        .. note::
+            Technically there&#39;s a slight ambiguity in calls where the
+            second label is a valid *fmt*. ``plot(&#39;n&#39;, &#39;o&#39;, data=obj)``
+            could be ``plt(x, y)`` or ``plt(y, fmt)``. In such cases,
+            the former interpretation is chosen, but a warning is issued.
+            You may suppress the warning by adding an empty format string
+            ``plot(&#39;n&#39;, &#39;o&#39;, &#39;&#39;, data=obj)``.
+    
+    Returns
+    -------
+    list of `.Line2D`
+        A list of lines representing the plotted data.
+    
+    Other Parameters
+    ----------------
+    scalex, scaley : bool, default: True
+        These parameters determine if the view limits are adapted to the
+        data limits. The values are passed on to `autoscale_view`.
+    
+    **kwargs : `.Line2D` properties, optional
+        *kwargs* are used to specify properties like a line label (for
+        auto legends), linewidth, antialiasing, marker face color.
+        Example::
+    
+        &gt;&gt;&gt; plot([1, 2, 3], [1, 2, 3], &#39;go-&#39;, label=&#39;line 1&#39;, linewidth=2)
+        &gt;&gt;&gt; plot([1, 2, 3], [1, 4, 9], &#39;rs&#39;, label=&#39;line 2&#39;)
+    
+        If you specify multiple lines with one plot call, the kwargs apply
+        to all those lines. In case the label object is iterable, each
+        element is used as labels for each set of data.
+    
+        Here is a list of available `.Line2D` properties:
+    
+        Properties:
+        agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array
+        alpha: scalar or None
+        animated: bool
+        antialiased or aa: bool
+        clip_box: `.Bbox`
+        clip_on: bool
+        clip_path: Patch or (Path, Transform) or None
+        color or c: color
+        dash_capstyle: `.CapStyle` or {&#39;butt&#39;, &#39;projecting&#39;, &#39;round&#39;}
+        dash_joinstyle: `.JoinStyle` or {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
+        dashes: sequence of floats (on/off ink in points) or (None, None)
+        data: (2, N) array or two 1D arrays
+        drawstyle or ds: {&#39;default&#39;, &#39;steps&#39;, &#39;steps-pre&#39;, &#39;steps-mid&#39;, &#39;steps-post&#39;}, default: &#39;default&#39;
+        figure: `.Figure`
+        fillstyle: {&#39;full&#39;, &#39;left&#39;, &#39;right&#39;, &#39;bottom&#39;, &#39;top&#39;, &#39;none&#39;}
+        gid: str
+        in_layout: bool
+        label: object
+        linestyle or ls: {&#39;-&#39;, &#39;--&#39;, &#39;-.&#39;, &#39;:&#39;, &#39;&#39;, (offset, on-off-seq), ...}
+        linewidth or lw: float
+        marker: marker style string, `~.path.Path` or `~.markers.MarkerStyle`
+        markeredgecolor or mec: color
+        markeredgewidth or mew: float
+        markerfacecolor or mfc: color
+        markerfacecoloralt or mfcalt: color
+        markersize or ms: float
+        markevery: None or int or (int, int) or slice or list[int] or float or (float, float) or list[bool]
+        path_effects: `.AbstractPathEffect`
+        picker: float or callable[[Artist, Event], tuple[bool, dict]]
+        pickradius: float
+        rasterized: bool
+        sketch_params: (scale: float, length: float, randomness: float)
+        snap: bool or None
+        solid_capstyle: `.CapStyle` or {&#39;butt&#39;, &#39;projecting&#39;, &#39;round&#39;}
+        solid_joinstyle: `.JoinStyle` or {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
+        transform: unknown
+        url: str
+        visible: bool
+        xdata: 1D array
+        ydata: 1D array
+        zorder: float
+    
+    See Also
+    --------
+    scatter : XY scatter plot with markers of varying size and/or color (
+        sometimes also called bubble chart).
+    
+    Notes
+    -----
+    **Format Strings**
+    
+    A format string consists of a part for color, marker and line::
+    
+        fmt = &#39;[marker][line][color]&#39;
+    
+    Each of them is optional. If not provided, the value from the style
+    cycle is used. Exception: If ``line`` is given, but no ``marker``,
+    the data will be a line without markers.
+    
+    Other combinations such as ``[color][marker][line]`` are also
+    supported, but note that their parsing may be ambiguous.
+    
+    **Markers**
+    
+    =============   ===============================
+    character       description
+    =============   ===============================
+    ``&#39;.&#39;``         point marker
+    ``&#39;,&#39;``         pixel marker
+    ``&#39;o&#39;``         circle marker
+    ``&#39;v&#39;``         triangle_down marker
+    ``&#39;^&#39;``         triangle_up marker
+    ``&#39;&lt;&#39;``         triangle_left marker
+    ``&#39;&gt;&#39;``         triangle_right marker
+    ``&#39;1&#39;``         tri_down marker
+    ``&#39;2&#39;``         tri_up marker
+    ``&#39;3&#39;``         tri_left marker
+    ``&#39;4&#39;``         tri_right marker
+    ``&#39;8&#39;``         octagon marker
+    ``&#39;s&#39;``         square marker
+    ``&#39;p&#39;``         pentagon marker
+    ``&#39;P&#39;``         plus (filled) marker
+    ``&#39;*&#39;``         star marker
+    ``&#39;h&#39;``         hexagon1 marker
+    ``&#39;H&#39;``         hexagon2 marker
+    ``&#39;+&#39;``         plus marker
+    ``&#39;x&#39;``         x marker
+    ``&#39;X&#39;``         x (filled) marker
+    ``&#39;D&#39;``         diamond marker
+    ``&#39;d&#39;``         thin_diamond marker
+    ``&#39;|&#39;``         vline marker
+    ``&#39;_&#39;``         hline marker
+    =============   ===============================
+    
+    **Line Styles**
+    
+    =============    ===============================
+    character        description
+    =============    ===============================
+    ``&#39;-&#39;``          solid line style
+    ``&#39;--&#39;``         dashed line style
+    ``&#39;-.&#39;``         dash-dot line style
+    ``&#39;:&#39;``          dotted line style
+    =============    ===============================
+    
+    Example format strings::
+    
+        &#39;b&#39;    # blue markers with default shape
+        &#39;or&#39;   # red circles
+        &#39;-g&#39;   # green solid line
+        &#39;--&#39;   # dashed line with default color
+        &#39;^k:&#39;  # black triangle_up markers connected by a dotted line
+    
+    **Colors**
+    
+    The supported color abbreviations are the single letter codes
+    
+    =============    ===============================
+    character        color
+    =============    ===============================
+    ``&#39;b&#39;``          blue
+    ``&#39;g&#39;``          green
+    ``&#39;r&#39;``          red
+    ``&#39;c&#39;``          cyan
+    ``&#39;m&#39;``          magenta
+    ``&#39;y&#39;``          yellow
+    ``&#39;k&#39;``          black
+    ``&#39;w&#39;``          white
+    =============    ===============================
+    
+    and the ``&#39;CN&#39;`` colors that index into the default property cycle.
+    
+    If the color is the only part of the format string, you can
+    additionally use any  `matplotlib.colors` spec, e.g. full names
+    (``&#39;green&#39;``) or hex strings (``&#39;#008000&#39;``).
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">plot</span></code> is a function from the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> module.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method plot in module matplotlib.axes._axes:
+
+plot(*args, scalex=True, scaley=True, data=None, **kwargs) method of matplotlib.axes._subplots.AxesSubplot instance
+    Plot y versus x as lines and/or markers.
+    
+    Call signatures::
+    
+        plot([x], y, [fmt], *, data=None, **kwargs)
+        plot([x], y, [fmt], [x2], y2, [fmt2], ..., **kwargs)
+    
+    The coordinates of the points or line nodes are given by *x*, *y*.
+    
+    The optional parameter *fmt* is a convenient way for defining basic
+    formatting like color, marker and linestyle. It&#39;s a shortcut string
+    notation described in the *Notes* section below.
+    
+    &gt;&gt;&gt; plot(x, y)        # plot x and y using default line style and color
+    &gt;&gt;&gt; plot(x, y, &#39;bo&#39;)  # plot x and y using blue circle markers
+    &gt;&gt;&gt; plot(y)           # plot y using x as index array 0..N-1
+    &gt;&gt;&gt; plot(y, &#39;r+&#39;)     # ditto, but with red plusses
+    
+    You can use `.Line2D` properties as keyword arguments for more
+    control on the appearance. Line properties and *fmt* can be mixed.
+    The following two calls yield identical results:
+    
+    &gt;&gt;&gt; plot(x, y, &#39;go--&#39;, linewidth=2, markersize=12)
+    &gt;&gt;&gt; plot(x, y, color=&#39;green&#39;, marker=&#39;o&#39;, linestyle=&#39;dashed&#39;,
+    ...      linewidth=2, markersize=12)
+    
+    When conflicting with *fmt*, keyword arguments take precedence.
+    
+    
+    **Plotting labelled data**
+    
+    There&#39;s a convenient way for plotting objects with labelled data (i.e.
+    data that can be accessed by index ``obj[&#39;y&#39;]``). Instead of giving
+    the data in *x* and *y*, you can provide the object in the *data*
+    parameter and just give the labels for *x* and *y*::
+    
+    &gt;&gt;&gt; plot(&#39;xlabel&#39;, &#39;ylabel&#39;, data=obj)
+    
+    All indexable objects are supported. This could e.g. be a `dict`, a
+    `pandas.DataFrame` or a structured numpy array.
+    
+    
+    **Plotting multiple sets of data**
+    
+    There are various ways to plot multiple sets of data.
+    
+    - The most straight forward way is just to call `plot` multiple times.
+      Example:
+    
+      &gt;&gt;&gt; plot(x1, y1, &#39;bo&#39;)
+      &gt;&gt;&gt; plot(x2, y2, &#39;go&#39;)
+    
+    - If *x* and/or *y* are 2D arrays a separate data set will be drawn
+      for every column. If both *x* and *y* are 2D, they must have the
+      same shape. If only one of them is 2D with shape (N, m) the other
+      must have length N and will be used for every data set m.
+    
+      Example:
+    
+      &gt;&gt;&gt; x = [1, 2, 3]
+      &gt;&gt;&gt; y = np.array([[1, 2], [3, 4], [5, 6]])
+      &gt;&gt;&gt; plot(x, y)
+    
+      is equivalent to:
+    
+      &gt;&gt;&gt; for col in range(y.shape[1]):
+      ...     plot(x, y[:, col])
+    
+    - The third way is to specify multiple sets of *[x]*, *y*, *[fmt]*
+      groups::
+    
+      &gt;&gt;&gt; plot(x1, y1, &#39;g^&#39;, x2, y2, &#39;g-&#39;)
+    
+      In this case, any additional keyword argument applies to all
+      datasets. Also this syntax cannot be combined with the *data*
+      parameter.
+    
+    By default, each line is assigned a different style specified by a
+    &#39;style cycle&#39;. The *fmt* and line property parameters are only
+    necessary if you want explicit deviations from these defaults.
+    Alternatively, you can also change the style cycle using
+    :rc:`axes.prop_cycle`.
+    
+    
+    Parameters
+    ----------
+    x, y : array-like or scalar
+        The horizontal / vertical coordinates of the data points.
+        *x* values are optional and default to ``range(len(y))``.
+    
+        Commonly, these parameters are 1D arrays.
+    
+        They can also be scalars, or two-dimensional (in that case, the
+        columns represent separate data sets).
+    
+        These arguments cannot be passed as keywords.
+    
+    fmt : str, optional
+        A format string, e.g. &#39;ro&#39; for red circles. See the *Notes*
+        section for a full description of the format strings.
+    
+        Format strings are just an abbreviation for quickly setting
+        basic line properties. All of these and more can also be
+        controlled by keyword arguments.
+    
+        This argument cannot be passed as keyword.
+    
+    data : indexable object, optional
+        An object with labelled data. If given, provide the label names to
+        plot in *x* and *y*.
+    
+        .. note::
+            Technically there&#39;s a slight ambiguity in calls where the
+            second label is a valid *fmt*. ``plot(&#39;n&#39;, &#39;o&#39;, data=obj)``
+            could be ``plt(x, y)`` or ``plt(y, fmt)``. In such cases,
+            the former interpretation is chosen, but a warning is issued.
+            You may suppress the warning by adding an empty format string
+            ``plot(&#39;n&#39;, &#39;o&#39;, &#39;&#39;, data=obj)``.
+    
+    Returns
+    -------
+    list of `.Line2D`
+        A list of lines representing the plotted data.
+    
+    Other Parameters
+    ----------------
+    scalex, scaley : bool, default: True
+        These parameters determine if the view limits are adapted to the
+        data limits. The values are passed on to `autoscale_view`.
+    
+    **kwargs : `.Line2D` properties, optional
+        *kwargs* are used to specify properties like a line label (for
+        auto legends), linewidth, antialiasing, marker face color.
+        Example::
+    
+        &gt;&gt;&gt; plot([1, 2, 3], [1, 2, 3], &#39;go-&#39;, label=&#39;line 1&#39;, linewidth=2)
+        &gt;&gt;&gt; plot([1, 2, 3], [1, 4, 9], &#39;rs&#39;, label=&#39;line 2&#39;)
+    
+        If you specify multiple lines with one plot call, the kwargs apply
+        to all those lines. In case the label object is iterable, each
+        element is used as labels for each set of data.
+    
+        Here is a list of available `.Line2D` properties:
+    
+        Properties:
+        agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array
+        alpha: scalar or None
+        animated: bool
+        antialiased or aa: bool
+        clip_box: `.Bbox`
+        clip_on: bool
+        clip_path: Patch or (Path, Transform) or None
+        color or c: color
+        dash_capstyle: `.CapStyle` or {&#39;butt&#39;, &#39;projecting&#39;, &#39;round&#39;}
+        dash_joinstyle: `.JoinStyle` or {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
+        dashes: sequence of floats (on/off ink in points) or (None, None)
+        data: (2, N) array or two 1D arrays
+        drawstyle or ds: {&#39;default&#39;, &#39;steps&#39;, &#39;steps-pre&#39;, &#39;steps-mid&#39;, &#39;steps-post&#39;}, default: &#39;default&#39;
+        figure: `.Figure`
+        fillstyle: {&#39;full&#39;, &#39;left&#39;, &#39;right&#39;, &#39;bottom&#39;, &#39;top&#39;, &#39;none&#39;}
+        gid: str
+        in_layout: bool
+        label: object
+        linestyle or ls: {&#39;-&#39;, &#39;--&#39;, &#39;-.&#39;, &#39;:&#39;, &#39;&#39;, (offset, on-off-seq), ...}
+        linewidth or lw: float
+        marker: marker style string, `~.path.Path` or `~.markers.MarkerStyle`
+        markeredgecolor or mec: color
+        markeredgewidth or mew: float
+        markerfacecolor or mfc: color
+        markerfacecoloralt or mfcalt: color
+        markersize or ms: float
+        markevery: None or int or (int, int) or slice or list[int] or float or (float, float) or list[bool]
+        path_effects: `.AbstractPathEffect`
+        picker: float or callable[[Artist, Event], tuple[bool, dict]]
+        pickradius: float
+        rasterized: bool
+        sketch_params: (scale: float, length: float, randomness: float)
+        snap: bool or None
+        solid_capstyle: `.CapStyle` or {&#39;butt&#39;, &#39;projecting&#39;, &#39;round&#39;}
+        solid_joinstyle: `.JoinStyle` or {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
+        transform: unknown
+        url: str
+        visible: bool
+        xdata: 1D array
+        ydata: 1D array
+        zorder: float
+    
+    See Also
+    --------
+    scatter : XY scatter plot with markers of varying size and/or color (
+        sometimes also called bubble chart).
+    
+    Notes
+    -----
+    **Format Strings**
+    
+    A format string consists of a part for color, marker and line::
+    
+        fmt = &#39;[marker][line][color]&#39;
+    
+    Each of them is optional. If not provided, the value from the style
+    cycle is used. Exception: If ``line`` is given, but no ``marker``,
+    the data will be a line without markers.
+    
+    Other combinations such as ``[color][marker][line]`` are also
+    supported, but note that their parsing may be ambiguous.
+    
+    **Markers**
+    
+    =============   ===============================
+    character       description
+    =============   ===============================
+    ``&#39;.&#39;``         point marker
+    ``&#39;,&#39;``         pixel marker
+    ``&#39;o&#39;``         circle marker
+    ``&#39;v&#39;``         triangle_down marker
+    ``&#39;^&#39;``         triangle_up marker
+    ``&#39;&lt;&#39;``         triangle_left marker
+    ``&#39;&gt;&#39;``         triangle_right marker
+    ``&#39;1&#39;``         tri_down marker
+    ``&#39;2&#39;``         tri_up marker
+    ``&#39;3&#39;``         tri_left marker
+    ``&#39;4&#39;``         tri_right marker
+    ``&#39;8&#39;``         octagon marker
+    ``&#39;s&#39;``         square marker
+    ``&#39;p&#39;``         pentagon marker
+    ``&#39;P&#39;``         plus (filled) marker
+    ``&#39;*&#39;``         star marker
+    ``&#39;h&#39;``         hexagon1 marker
+    ``&#39;H&#39;``         hexagon2 marker
+    ``&#39;+&#39;``         plus marker
+    ``&#39;x&#39;``         x marker
+    ``&#39;X&#39;``         x (filled) marker
+    ``&#39;D&#39;``         diamond marker
+    ``&#39;d&#39;``         thin_diamond marker
+    ``&#39;|&#39;``         vline marker
+    ``&#39;_&#39;``         hline marker
+    =============   ===============================
+    
+    **Line Styles**
+    
+    =============    ===============================
+    character        description
+    =============    ===============================
+    ``&#39;-&#39;``          solid line style
+    ``&#39;--&#39;``         dashed line style
+    ``&#39;-.&#39;``         dash-dot line style
+    ``&#39;:&#39;``          dotted line style
+    =============    ===============================
+    
+    Example format strings::
+    
+        &#39;b&#39;    # blue markers with default shape
+        &#39;or&#39;   # red circles
+        &#39;-g&#39;   # green solid line
+        &#39;--&#39;   # dashed line with default color
+        &#39;^k:&#39;  # black triangle_up markers connected by a dotted line
+    
+    **Colors**
+    
+    The supported color abbreviations are the single letter codes
+    
+    =============    ===============================
+    character        color
+    =============    ===============================
+    ``&#39;b&#39;``          blue
+    ``&#39;g&#39;``          green
+    ``&#39;r&#39;``          red
+    ``&#39;c&#39;``          cyan
+    ``&#39;m&#39;``          magenta
+    ``&#39;y&#39;``          yellow
+    ``&#39;k&#39;``          black
+    ``&#39;w&#39;``          white
+    =============    ===============================
+    
+    and the ``&#39;CN&#39;`` colors that index into the default property cycle.
+    
+    If the color is the only part of the format string, you can
+    additionally use any  `matplotlib.colors` spec, e.g. full names
+    (``&#39;green&#39;``) or hex strings (``&#39;#008000&#39;``).
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the use of the word <code class="docutils literal notranslate"><span class="pre">method</span></code>. Here, <code class="docutils literal notranslate"><span class="pre">plot</span></code> is attached to an <code class="docutils literal notranslate"><span class="pre">AxesSubplot</span></code> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matplotlib.axes._subplots.AxesSubplot
+</pre></div>
+</div>
+</div>
+</div>
+<p>We use the word <code class="docutils literal notranslate"><span class="pre">instance</span></code> to refer to the creation of an object.</p>
+<p>Here’s another example we’ve seen in lecture.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we’re creating an instance of a <code class="docutils literal notranslate"><span class="pre">Generator</span></code> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.random._generator.Generator
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve seen examples of methods on <code class="docutils literal notranslate"><span class="pre">rng</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.98223835, 0.49395589, 0.20047638, 0.71976111, 0.71528793])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function random:
+
+random(...) method of numpy.random._generator.Generator instance
+    random(size=None, dtype=np.float64, out=None)
+    
+    Return random floats in the half-open interval [0.0, 1.0).
+    
+    Results are from the &quot;continuous uniform&quot; distribution over the
+    stated interval.  To sample :math:`Unif[a, b), b &gt; a` multiply
+    the output of `random` by `(b-a)` and add `a`::
+    
+      (b - a) * random() + a
+    
+    Parameters
+    ----------
+    size : int or tuple of ints, optional
+        Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+        ``m * n * k`` samples are drawn.  Default is None, in which case a
+        single value is returned.
+    dtype : dtype, optional
+        Desired dtype of the result, only `float64` and `float32` are supported.
+        Byteorder must be native. The default value is np.float64.
+    out : ndarray, optional
+        Alternative output array in which to place the result. If size is not None,
+        it must have the same shape as the provided size and must match the type of
+        the output values.
+    
+    Returns
+    -------
+    out : float or ndarray of floats
+        Array of random floats of shape `size` (unless ``size=None``, in which
+        case a single float is returned).
+    
+    Examples
+    --------
+    &gt;&gt;&gt; rng = np.random.default_rng()
+    &gt;&gt;&gt; rng.random()
+    0.47108547995356098 # random
+    &gt;&gt;&gt; type(rng.random())
+    &lt;class &#39;float&#39;&gt;
+    &gt;&gt;&gt; rng.random((5,))
+    array([ 0.30220482,  0.86820401,  0.1654503 ,  0.11659149,  0.54323428]) # random
+    
+    Three-by-two array of random numbers from [-5, 0):
+    
+    &gt;&gt;&gt; 5 * rng.random((3, 2)) - 5
+    array([[-3.99149989, -0.52338984], # random
+           [-2.99091858, -0.79479508],
+           [-1.23204345, -1.75224494]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="os-vs-pathlib">
+<h3>os vs pathlib<a class="headerlink" href="#os-vs-pathlib" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>We’ll see that OOP takes some tasks and makes them much easier.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Find all files (as opposed to folders) in <code class="docutils literal notranslate"><span class="pre">/Users/yasmeen/Dropbox/UCI/IoR/Summer</span> <span class="pre">Session</span> <span class="pre">I</span> <span class="pre">2024/Math</span> <span class="pre">9/Jupyterbook/Math9-Y24</span></code></p></li>
+</ul>
+<p>More basic, non-OOP way.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;intro.md~&#39;,
+ &#39;.DS_Store&#39;,
+ &#39;LICENSE&#39;,
+ &#39;requirements.txt&#39;,
+ &#39;_config.yml~&#39;,
+ &#39;images&#39;,
+ &#39;._config.yml.un~&#39;,
+ &#39;intro.md&#39;,
+ &#39;README.md&#39;,
+ &#39;_toc.yml&#39;,
+ &#39;anteater.png&#39;,
+ &#39;homework&#39;,
+ &#39;.intro.md.un~&#39;,
+ &#39;_build&#39;,
+ &#39;_config.yml&#39;,
+ &#39;._toc.yml.un~&#39;,
+ &#39;final&#39;,
+ &#39;lectures&#39;,
+ &#39;.git&#39;,
+ &#39;discussion&#39;,
+ &#39;ash-vapor.png&#39;,
+ &#39;_toc.yml~&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function listdir in module posix:
+
+listdir(path=None)
+    Return a list containing the names of the files in the directory.
+    
+    path can be specified as either str, bytes, or a path-like object.  If path is bytes,
+      the filenames returned will also be bytes; in all other circumstances
+      the filenames returned will be str.
+    If path is None, uses the path=&#39;.&#39;.
+    On some platforms, path may also be specified as an open file descriptor;\
+      the file descriptor must refer to a directory.
+      If this functionality is unavailable, using it raises NotImplementedError.
+    
+    The list is in arbitrary order.  It does not include the special
+    entries &#39;.&#39; and &#39;..&#39; even if they are present in the directory.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Which are files? Which are folders?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mylist</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str,
+ str]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we can see, there isn’t really a good way of determining which are folders, and which are files. Now, let’s see the OOP way.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Path in module pathlib:
+
+class Path(PurePath)
+ |  Path(*args, **kwargs)
+ |  
+ |  PurePath subclass that can make system calls.
+ |  
+ |  Path represents a filesystem path but unlike PurePath, also offers
+ |  methods to do system calls on path objects. Depending on your system,
+ |  instantiating a Path will return either a PosixPath or a WindowsPath
+ |  object. You can also instantiate a PosixPath or WindowsPath directly,
+ |  but cannot instantiate a WindowsPath on a POSIX system or vice versa.
+ |  
+ |  Method resolution order:
+ |      Path
+ |      PurePath
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __enter__(self)
+ |  
+ |  __exit__(self, t, v, tb)
+ |  
+ |  absolute(self)
+ |      Return an absolute version of this path.  This function works
+ |      even if the path doesn&#39;t point to anything.
+ |      
+ |      No normalization is done, i.e. all &#39;.&#39; and &#39;..&#39; will be kept along.
+ |      Use resolve() to get the canonical path to a file.
+ |  
+ |  chmod(self, mode)
+ |      Change the permissions of the path, like os.chmod().
+ |  
+ |  exists(self)
+ |      Whether this path exists.
+ |  
+ |  expanduser(self)
+ |      Return a new path with expanded ~ and ~user constructs
+ |      (as returned by os.path.expanduser)
+ |  
+ |  glob(self, pattern)
+ |      Iterate over this subtree and yield all existing files (of any
+ |      kind, including directories) matching the given relative pattern.
+ |  
+ |  group(self)
+ |      Return the group name of the file gid.
+ |  
+ |  is_block_device(self)
+ |      Whether this path is a block device.
+ |  
+ |  is_char_device(self)
+ |      Whether this path is a character device.
+ |  
+ |  is_dir(self)
+ |      Whether this path is a directory.
+ |  
+ |  is_fifo(self)
+ |      Whether this path is a FIFO.
+ |  
+ |  is_file(self)
+ |      Whether this path is a regular file (also True for symlinks pointing
+ |      to regular files).
+ |  
+ |  is_mount(self)
+ |      Check if this path is a POSIX mount point
+ |  
+ |  is_socket(self)
+ |      Whether this path is a socket.
+ |  
+ |  is_symlink(self)
+ |      Whether this path is a symbolic link.
+ |  
+ |  iterdir(self)
+ |      Iterate over the files in this directory.  Does not yield any
+ |      result for the special paths &#39;.&#39; and &#39;..&#39;.
+ |  
+ |  lchmod(self, mode)
+ |      Like chmod(), except if the path points to a symlink, the symlink&#39;s
+ |      permissions are changed, rather than its target&#39;s.
+ |  
+ |  link_to(self, target)
+ |      Make the target path a hard link pointing to this path.
+ |      
+ |      Note this function does not make this path a hard link to *target*,
+ |      despite the implication of the function and argument names. The order
+ |      of arguments (target, link) is the reverse of Path.symlink_to, but
+ |      matches that of os.link.
+ |  
+ |  lstat(self)
+ |      Like stat(), except if the path points to a symlink, the symlink&#39;s
+ |      status information is returned, rather than its target&#39;s.
+ |  
+ |  mkdir(self, mode=511, parents=False, exist_ok=False)
+ |      Create a new directory at this given path.
+ |  
+ |  open(self, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None)
+ |      Open the file pointed by this path and return a file object, as
+ |      the built-in open() function does.
+ |  
+ |  owner(self)
+ |      Return the login name of the file owner.
+ |  
+ |  read_bytes(self)
+ |      Open the file in bytes mode, read it, and close the file.
+ |  
+ |  read_text(self, encoding=None, errors=None)
+ |      Open the file in text mode, read it, and close the file.
+ |  
+ |  readlink(self)
+ |      Return the path to which the symbolic link points.
+ |  
+ |  rename(self, target)
+ |      Rename this path to the target path.
+ |      
+ |      The target path may be absolute or relative. Relative paths are
+ |      interpreted relative to the current working directory, *not* the
+ |      directory of the Path object.
+ |      
+ |      Returns the new Path instance pointing to the target path.
+ |  
+ |  replace(self, target)
+ |      Rename this path to the target path, overwriting if that path exists.
+ |      
+ |      The target path may be absolute or relative. Relative paths are
+ |      interpreted relative to the current working directory, *not* the
+ |      directory of the Path object.
+ |      
+ |      Returns the new Path instance pointing to the target path.
+ |  
+ |  resolve(self, strict=False)
+ |      Make the path absolute, resolving all symlinks on the way and also
+ |      normalizing it (for example turning slashes into backslashes under
+ |      Windows).
+ |  
+ |  rglob(self, pattern)
+ |      Recursively yield all existing files (of any kind, including
+ |      directories) matching the given relative pattern, anywhere in
+ |      this subtree.
+ |  
+ |  rmdir(self)
+ |      Remove this directory.  The directory must be empty.
+ |  
+ |  samefile(self, other_path)
+ |      Return whether other_path is the same or not as this file
+ |      (as returned by os.path.samefile()).
+ |  
+ |  stat(self)
+ |      Return the result of the stat() system call on this path, like
+ |      os.stat() does.
+ |  
+ |  symlink_to(self, target, target_is_directory=False)
+ |      Make this path a symlink pointing to the target path.
+ |      Note the order of arguments (link, target) is the reverse of os.symlink.
+ |  
+ |  touch(self, mode=438, exist_ok=True)
+ |      Create this file with the given access mode, if it doesn&#39;t exist.
+ |  
+ |  unlink(self, missing_ok=False)
+ |      Remove this file or link.
+ |      If the path is a directory, use rmdir() instead.
+ |  
+ |  write_bytes(self, data)
+ |      Open the file in bytes mode, write to it, and close the file.
+ |  
+ |  write_text(self, data, encoding=None, errors=None)
+ |      Open the file in text mode, write to it, and close the file.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  cwd() from builtins.type
+ |      Return a new path pointing to the current working directory
+ |      (as returned by os.getcwd()).
+ |  
+ |  home() from builtins.type
+ |      Return a new path pointing to the user&#39;s home directory (as
+ |      returned by os.path.expanduser(&#39;~&#39;)).
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(cls, *args, **kwargs)
+ |      Construct a PurePath from one or several strings and or existing
+ |      PurePath objects.  The strings and path objects are combined so as
+ |      to yield a canonicalized path, which is incorporated into the
+ |      new PurePath object.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from PurePath:
+ |  
+ |  __bytes__(self)
+ |      Return the bytes representation of the path.  This is only
+ |      recommended to use under Unix.
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  __fspath__(self)
+ |  
+ |  __ge__(self, other)
+ |      Return self&gt;=value.
+ |  
+ |  __gt__(self, other)
+ |      Return self&gt;value.
+ |  
+ |  __hash__(self)
+ |      Return hash(self).
+ |  
+ |  __le__(self, other)
+ |      Return self&lt;=value.
+ |  
+ |  __lt__(self, other)
+ |      Return self&lt;value.
+ |  
+ |  __reduce__(self)
+ |      Helper for pickle.
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __rtruediv__(self, key)
+ |  
+ |  __str__(self)
+ |      Return the string representation of the path, suitable for
+ |      passing to system calls.
+ |  
+ |  __truediv__(self, key)
+ |  
+ |  as_posix(self)
+ |      Return the string representation of the path with forward (/)
+ |      slashes.
+ |  
+ |  as_uri(self)
+ |      Return the path as a &#39;file&#39; URI.
+ |  
+ |  is_absolute(self)
+ |      True if the path is absolute (has both a root and, if applicable,
+ |      a drive).
+ |  
+ |  is_relative_to(self, *other)
+ |      Return True if the path is relative to another path or False.
+ |  
+ |  is_reserved(self)
+ |      Return True if the path contains one of the special names reserved
+ |      by the system, if any.
+ |  
+ |  joinpath(self, *args)
+ |      Combine this path with one or several arguments, and return a
+ |      new path representing either a subpath (if all arguments are relative
+ |      paths) or a totally different path (if one of the arguments is
+ |      anchored).
+ |  
+ |  match(self, path_pattern)
+ |      Return True if this path matches the given pattern.
+ |  
+ |  relative_to(self, *other)
+ |      Return the relative path to another path identified by the passed
+ |      arguments.  If the operation is not possible (because this is not
+ |      a subpath of the other path), raise ValueError.
+ |  
+ |  with_name(self, name)
+ |      Return a new path with the file name changed.
+ |  
+ |  with_stem(self, stem)
+ |      Return a new path with the stem changed.
+ |  
+ |  with_suffix(self, suffix)
+ |      Return a new path with the file suffix changed.  If the path
+ |      has no suffix, add given suffix.  If the given suffix is an empty
+ |      string, remove the suffix from the path.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from PurePath:
+ |  
+ |  __class_getitem__(type) from builtins.type
+ |  
+ |  ----------------------------------------------------------------------
+ |  Readonly properties inherited from PurePath:
+ |  
+ |  anchor
+ |      The concatenation of the drive and root, or &#39;&#39;.
+ |  
+ |  drive
+ |      The drive prefix (letter or UNC path), if any.
+ |  
+ |  name
+ |      The final path component, if any.
+ |  
+ |  parent
+ |      The logical parent of the path.
+ |  
+ |  parents
+ |      A sequence of this path&#39;s logical parents.
+ |  
+ |  parts
+ |      An object providing sequence-like access to the
+ |      components in the filesystem path.
+ |  
+ |  root
+ |      The root of the path, if any.
+ |  
+ |  stem
+ |      The final path component, minus its last suffix.
+ |  
+ |  suffix
+ |      The final component&#39;s last suffix, if any.
+ |      
+ |      This includes the leading period. For example: &#39;.txt&#39;
+ |  
+ |  suffixes
+ |      A list of the final component&#39;s suffixes, if any.
+ |      
+ |      These include the leading periods. For example: [&#39;.tar&#39;, &#39;.gz&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the line above, we’re actually creating an instance of a Path object. Notice that pass an argument (file path name), unlike when created <code class="docutils literal notranslate"><span class="pre">rng</span></code> or <code class="docutils literal notranslate"><span class="pre">fig,ax</span></code> above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pathlib.PosixPath
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/intro.md~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/.DS_Store&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/LICENSE&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/requirements.txt&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_config.yml~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/images&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/._config.yml.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/intro.md&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/README.md&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_toc.yml&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/anteater.png&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/homework&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/.intro.md.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_build&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_config.yml&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/._toc.yml.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/final&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/lectures&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/.git&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/discussion&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/ash-vapor.png&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_toc.yml~&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p>It already looks like we have more information!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;intro.md~&#39;,
+ &#39;.DS_Store&#39;,
+ &#39;LICENSE&#39;,
+ &#39;requirements.txt&#39;,
+ &#39;_config.yml~&#39;,
+ &#39;images&#39;,
+ &#39;._config.yml.un~&#39;,
+ &#39;intro.md&#39;,
+ &#39;README.md&#39;,
+ &#39;_toc.yml&#39;,
+ &#39;anteater.png&#39;,
+ &#39;homework&#39;,
+ &#39;.intro.md.un~&#39;,
+ &#39;_build&#39;,
+ &#39;_config.yml&#39;,
+ &#39;._toc.yml.un~&#39;,
+ &#39;final&#39;,
+ &#39;lectures&#39;,
+ &#39;.git&#39;,
+ &#39;discussion&#39;,
+ &#39;ash-vapor.png&#39;,
+ &#39;_toc.yml~&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath,
+ pathlib.PosixPath]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[True,
+ True,
+ True,
+ True,
+ True,
+ False,
+ True,
+ True,
+ True,
+ True,
+ True,
+ False,
+ True,
+ False,
+ True,
+ True,
+ False,
+ False,
+ False,
+ False,
+ True,
+ True]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/intro.md~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/.DS_Store&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/LICENSE&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/requirements.txt&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_config.yml~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/._config.yml.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/intro.md&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/README.md&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_toc.yml&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/anteater.png&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/.intro.md.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_config.yml&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/._toc.yml.un~&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/ash-vapor.png&#39;),
+ PosixPath(&#39;/Users/yasmeen/Dropbox/UCI/IoR/Summer Session I 2024/Math 9/Jupyterbook/Math9-Y24/_toc.yml~&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;intro.md~&#39;,
+ &#39;.DS_Store&#39;,
+ &#39;LICENSE&#39;,
+ &#39;requirements.txt&#39;,
+ &#39;_config.yml~&#39;,
+ &#39;._config.yml.un~&#39;,
+ &#39;intro.md&#39;,
+ &#39;README.md&#39;,
+ &#39;_toc.yml&#39;,
+ &#39;anteater.png&#39;,
+ &#39;.intro.md.un~&#39;,
+ &#39;_config.yml&#39;,
+ &#39;._toc.yml.un~&#39;,
+ &#39;ash-vapor.png&#39;,
+ &#39;_toc.yml~&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-a-namedcolor-class">
+<h3>Defining a NamedColor class<a class="headerlink" href="#defining-a-namedcolor-class" title="Permalink to this headline">#</a></h3>
+<p>Let’s start with a little bit of a silly example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NamedColor</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Blue&quot;</span>
+    <span class="n">rgb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s create an instance of <code class="docutils literal notranslate"><span class="pre">NamedColor()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Behind the scenes: <code class="docutils literal notranslate"><span class="pre">__init__</span></code> is being called. We can update this ourselves.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Blue&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">rgb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 0, 255]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This example is a little lacking because there’s no variation! Maybe we don’t want everything to be blue. Idea: Pass arguments that tell us how to set the color.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NamedColor</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rgb_tuple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rgb</span> <span class="o">=</span> <span class="n">rgb_tuple</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [32],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;name&#39; and &#39;rgb_tuple&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>What’s happening here is I didn’t specify any input arguments. When it says “positional arguments” that means I can just pass the values, without needing keywords</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">,[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Red&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">rgb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[255, 0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try to update our code so that I don’t necessarily need to pass an RGB triple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">to_rgb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">to_rgb</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.0, 0.0, 0.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice, this is normalized different than we’re used to. Here’s how we can update it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">255</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">to_rgb</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[255, 0, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s set a default value for <code class="docutils literal notranslate"><span class="pre">rgb_tuple</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NamedColor</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rgb_tuple</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rgb_tuple</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rgb_tuple</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">255</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">to_rgb</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rgb</span> <span class="o">=</span> <span class="n">rgb_tuple</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">(</span><span class="s2">&quot;Orange&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Orange&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">rgb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[255, 165, 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="c1">#calling __repr__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.NamedColor at 0x7fde8b637850&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="c1">#calling __str__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.NamedColor object at 0x7fde8b637850&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NamedColor</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rgb_tuple</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rgb_tuple</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rgb_tuple</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">255</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">to_rgb</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rgb</span> <span class="o">=</span> <span class="n">rgb_tuple</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;The color </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> with RGB value </span><span class="si">{</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rgb</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">(</span><span class="s2">&quot;Green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.NamedColor at 0x7fde8b8bfcd0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The color Green with RGB value (0, 128, 0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-the-class-is-a-separate-file">
+<h3>Defining the class is a separate file<a class="headerlink" href="#defining-the-class-is-a-separate-file" title="Permalink to this headline">#</a></h3>
+<p>We’ll go to the Jupyter notebook homepage and create a new text file. We’ll name it <code class="docutils literal notranslate"><span class="pre">math9colors.py</span></code></p>
+<p><strong>Disclaimer:</strong> Jupyter notebook won’t automatically refresh my separate class file if I make changes. The following magics are to auto-refresh it. I’m also going to restart the kernel, so that we see that we’re really importing our class file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math9colors</span> <span class="kn">import</span> <span class="n">NamedColor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">(</span><span class="s2">&quot;Orange&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The color Orange with RGB value (255, 165, 0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s try to do some image processing with <code class="docutils literal notranslate"><span class="pre">NamedColor</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;ash-lake.jpg&quot;</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" src="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I’m going to get a weird error. I don’t expect you to know what it is! I’ll explain.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([255, 165,   0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([255, 165,   0], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">150</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">:</span><span class="mi">250</span><span class="p">]</span> <span class="o">=</span> <span class="n">NamedColor</span><span class="p">(</span><span class="s2">&quot;darkkhaki&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9bb833120608556b4c60c21597dcdd36813416844f5477dae9c7bbec57efdd42.png" src="../_images/9bb833120608556b4c60c21597dcdd36813416844f5477dae9c7bbec57efdd42.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brief-introduction-to-object-oriented-programming-oop">Brief Introduction to Object-Oriented Programming (OOP)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#os-vs-pathlib">os vs pathlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-namedcolor-class">Defining a NamedColor class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-class-is-a-separate-file">Defining the class is a separate file</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Christopher Davis and Yasmeen Baki
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
